@@ -981,7 +981,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return `https://api.github.com/repos/${username}/${repoName}/contents/${path}`;
     }
 
-   function loadFromGithubUrl(githubUrl) {
+   async function loadFromGithubUrl(githubUrl) {
      const apiUrl = convertToGitHubAPIUrl(githubRepositoryUrl);
 
      try {
