@@ -982,7 +982,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
    async function loadFromGithubUrl(githubUrl) {
-     const apiUrl = convertToGitHubAPIUrl(githubRepositoryUrl);
+     const apiUrl = convertToGitHubAPIUrl(githubUrl);
 
      try {
          const response = await fetch(apiUrl);
