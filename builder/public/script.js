@@ -2207,7 +2207,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         });
     });
-    
+
+
+    // Initialize State
+    githubUrl = "https://github.com/RewardReports/reward-reports/tree/main/builder/testFiles";
+    loadFromGithubUrl(githubUrl);
 });
 
 // Add a function to display a warning message
