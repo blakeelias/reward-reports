@@ -656,6 +656,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const folder = zip.folder(folderName);
             folder.file(markdownFileName, markdownContent);
 
+            console.log("markdownContent");
+            console.log(markdownContent);
+
             // Define a function to fetch and add the template file
             const addTemplateFile = async () => {
                 try {
