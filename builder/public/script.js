@@ -2275,7 +2275,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Initialize State
-    githubUrl = "https://github.com/RewardReports/reward-reports/tree/main/builder/testFiles";
+    githubUrl = "https://github.com/RewardReports/reward-reports/tree/main/builder/MyCity_Boston";
     loadFromGithubUrl(githubUrl);
 });
 
@@ -2292,3 +2292,4 @@ window.addEventListener('beforeunload', displayUnloadWarning);
 // submitButton.addEventListener('click', () => {
 //     window.removeEventListener('beforeunload', displayUnloadWarning);
 // });
+
