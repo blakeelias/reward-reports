@@ -1231,7 +1231,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
 
-    saveButton.addEventListener('click', () => {
+    function saveChanges() {
         // console.log(currentEditSection.id);
         const subsections = document.querySelectorAll('.subsection p');
         const targetNav = document.querySelector(`[data-target="${currentEditSection.id}"]`);
@@ -1246,7 +1246,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         replaceLinksInSection();
-            
+
         subsections.forEach(subsection => {
             subsection.contentEditable = false;
         });
@@ -1278,7 +1278,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // descriptionInput.value = '';
 
         userFilter(userType);
-    });
+    }
+
+    saveButton.addEventListener('click', saveChanges);
 
     infoIcons.forEach((icon) => {
         icon.addEventListener('mouseover', (event) => {
