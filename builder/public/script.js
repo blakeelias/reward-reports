@@ -349,6 +349,7 @@ document.addEventListener('DOMContentLoaded', () => {
             button.removeEventListener('click', () => {});
             
             authorForm.style.display = 'block';
+            addAutoSave(currentEditSection);
         });
     });
 
@@ -1281,6 +1282,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     saveButton.addEventListener('click', saveChanges);
+
+    function addAutoSave(currentEditSection) {
+      const paragraphs = currentEditSection.querySelectorAll('p[data-original-content]');
+      paragraphs.forEach(paragraph => {
+          paragraph.addEventListener('input', saveChanges);
+      });
+    }
 
     infoIcons.forEach((icon) => {
         icon.addEventListener('mouseover', (event) => {
